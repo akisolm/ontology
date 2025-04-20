@@ -1,12 +1,957 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/26277/ontologies/2025/3/untitled-ontology-23/"
-     xml:base="http://www.semanticweb.org/26277/ontologies/2025/3/untitled-ontology-23/"
+<rdf:RDF xmlns="https://akisolm.github.io/ontology/porcelain.rdf#"
+     xml:base="https://akisolm.github.io/ontology/porcelain.rdf"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/26277/ontologies/2025/3/untitled-ontology-23"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="https://akisolm.github.io/ontology/porcelain.rdf">
+        <owl:versionIRI rdf:resource="https://akisolm.github.io/ontology/porcelain/1.0.0"/>
+        <dc:creator xml:lang="en">Chenxi Wang</dc:creator>
+        <rdfs:comment xml:lang="en">This is the coursework of Group 4 for Information Representation and Knowledge Graph, an ontology of ancient Chinese porcelain, deployed via GitHub Pages.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">version 1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasDynasty -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasDynasty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Dynasty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasSize -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#isDependedOn -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#isDependedOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#isFoundAt -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#isFoundAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#isFromKiln -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#isFromKiln">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#isHousedAt -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#isHousedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#isMadeOf -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#isMadeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfBase -->
+
+    <owl:DatatypeProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfBelly -->
+
+    <owl:DatatypeProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfBelly">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfFoot -->
+
+    <owl:DatatypeProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfFoot">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfMouth -->
+
+    <owl:DatatypeProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DiameterOfMouth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasFeature -->
+
+    <owl:DatatypeProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasOrnamentation -->
+
+    <owl:DatatypeProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasOrnamentation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#height -->
+
+    <owl:DatatypeProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#height">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Belly -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Belly">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">belly</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">腹</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#BodyMaterial -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#BodyMaterial">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Material"/>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Bottle -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Bottle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Spout"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeSize"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">bottle</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷瓶</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Bowl -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Bowl">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">bowl</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷碗</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Box -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Box">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">box</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷盒</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Component -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Component">
+        <skos:prefLabel xml:lang="en">component</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">部件</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Cooking -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Cooking">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Cup -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Cup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasFunction"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#StoringSolid"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasFunction"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#StoringLiquid"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">cup</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷杯</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Belly"/>
+        <skos:prefLabel xml:lang="en">deep belly</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">深腹</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Dish -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Dish">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Spout"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#ShallowBelly"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">dish</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷盘</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Dynasty -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Dynasty">
+        <skos:prefLabel xml:lang="en">dynasty</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">朝代</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Ear -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Ear">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">ear</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">耳</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Figurine -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Figurine">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Mouth"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">figurine</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷塑</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Foot -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Foot">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">foot</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">足</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Function -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Function">
+        <skos:prefLabel xml:lang="en">function</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">功能</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#GlazeMaterial -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#GlazeMaterial">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Material"/>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Head -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Head">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">head</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">头</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Jar -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Jar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">jar</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷罐</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Jug -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Jug">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Spout"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeSize"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">jug</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷壶</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Mouth"/>
+        <skos:prefLabel xml:lang="en">large mouth</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">大口</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#LargeSize -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#LargeSize">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
+        <skos:prefLabel xml:lang="en">large size</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">大型</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Lid -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Lid">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">lid</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">盖</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Location -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Location">
+        <skos:prefLabel xml:lang="en">location</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">地点</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Material -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Material">
+        <skos:prefLabel xml:lang="en">material</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">原料</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Mouth -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Mouth">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">mouth</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">口</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Neck -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Neck">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">neck</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">颈</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Planting -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Planting">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Porcelain -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain">
+        <skos:prefLabel xml:lang="en">porcelain</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷器</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Sacrifice -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Sacrifice">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#ShallowBelly -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#ShallowBelly">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Belly"/>
+        <skos:prefLabel xml:lang="en">shallow belly</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">浅腹</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Shoulder -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">shoulder</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">肩</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Size -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Size">
+        <skos:prefLabel xml:lang="en">size</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">尺寸</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Mouth"/>
+        <skos:prefLabel xml:lang="en">small mouth</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">小口</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#SmallSize -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
+        <skos:prefLabel xml:lang="en">small size</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">小型</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Spout -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Spout">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <skos:prefLabel xml:lang="en">spout</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">流</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#StoringLiquid -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#StoringLiquid">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#StoringSolid -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#StoringSolid">
+        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Zun -->
+
+    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Zun">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:prefLabel xml:lang="en">Zun</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷尊</skos:prefLabel>
+    </owl:Class>
 </rdf:RDF>
 
 
