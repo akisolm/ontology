@@ -62,6 +62,9 @@
     <!-- https://akisolm.github.io/ontology/porcelain.rdf#DependOn -->
 
     <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DependOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
         <rdfs:label xml:lang="en">depend on</rdfs:label>
     </owl:ObjectProperty>
     
@@ -96,17 +99,6 @@
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
         <rdfs:label xml:lang="en">has function</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasSize -->
-
-    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasSize">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
-        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
-        <rdfs:label xml:lang="en">has size</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -312,10 +304,6 @@
                         <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                         <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth"/>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
-                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeSize"/>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -370,15 +358,24 @@
                                 <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                                 <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
                             </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
-                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
-                            </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasFunction"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#StoringLiquid"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasFunction"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#StoringSolid"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="zh">瓷盆归入此类</rdfs:comment>
         <skos:prefLabel xml:lang="en">bowl</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">瓷碗</skos:prefLabel>
     </owl:Class>
@@ -423,10 +420,6 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                         <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
-                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -505,19 +498,16 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
-                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
+                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasFunction"/>
                         <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#StoringLiquid"/>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
-                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="zh">瓷盏，瓷匜，瓷缸归入此类</rdfs:comment>
         <skos:prefLabel xml:lang="en">cup</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">瓷杯</skos:prefLabel>
     </owl:Class>
@@ -560,14 +550,6 @@
                                     </owl:Restriction>
                                 </owl:complementOf>
                             </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
-                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Spout"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                                 <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
@@ -580,15 +562,12 @@
                                 <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                                 <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#ShallowBelly"/>
                             </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
-                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
-                            </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="zh">瓷碟，瓷洗归入此类</rdfs:comment>
         <skos:prefLabel xml:lang="en">dish</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">瓷盘</skos:prefLabel>
     </owl:Class>
@@ -692,30 +671,6 @@
                     <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
-                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
-                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
-                                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                                 <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
@@ -729,8 +684,16 @@
                                 <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
-                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Shoulder"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -774,10 +737,6 @@
                         <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                         <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Spout"/>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasSize"/>
-                        <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LargeSize"/>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -794,17 +753,6 @@
         <owl:disjointWith rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth"/>
         <skos:prefLabel xml:lang="en">large mouth</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">大口</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- https://akisolm.github.io/ontology/porcelain.rdf#LargeSize -->
-
-    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#LargeSize">
-        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
-        <owl:disjointWith rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
-        <skos:prefLabel xml:lang="en">large size</skos:prefLabel>
-        <skos:prefLabel xml:lang="zh">大型</skos:prefLabel>
     </owl:Class>
     
 
@@ -912,31 +860,12 @@
     
 
 
-    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Size -->
-
-    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Size">
-        <skos:prefLabel xml:lang="en">size</skos:prefLabel>
-        <skos:prefLabel xml:lang="zh">尺寸</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth -->
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Mouth"/>
         <skos:prefLabel xml:lang="en">small mouth</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">小口</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- https://akisolm.github.io/ontology/porcelain.rdf#SmallSize -->
-
-    <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize">
-        <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
-        <skos:prefLabel xml:lang="en">small size</skos:prefLabel>
-        <skos:prefLabel xml:lang="zh">小型</skos:prefLabel>
     </owl:Class>
     
 
@@ -978,6 +907,14 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Lid"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent"/>
                         <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly"/>
