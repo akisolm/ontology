@@ -8,7 +8,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="http://schema.org/"
+     xmlns:porcelain="https://akisolm.github.io/ontology/porcelain.rdf#">
     <owl:Ontology rdf:about="https://akisolm.github.io/ontology/porcelain.rdf">
         <owl:versionIRI rdf:resource="https://akisolm.github.io/ontology/porcelain/1.0.0"/>
         <dc:creator xml:lang="en">Chenxi Wang</dc:creator>
@@ -35,6 +36,12 @@
     
 
 
+    <!-- http://schema.org/image -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
@@ -52,12 +59,21 @@
     
 
 
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#DependOn -->
+
+    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DependOn">
+        <rdfs:label xml:lang="en">depend on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://akisolm.github.io/ontology/porcelain.rdf#hasComponent -->
 
     <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#hasComponent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <rdfs:label xml:lang="en">has component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -68,6 +84,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Dynasty"/>
+        <rdfs:label xml:lang="en">has dynasty</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -78,6 +95,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+        <rdfs:label xml:lang="en">has function</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -88,16 +106,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://akisolm.github.io/ontology/porcelain.rdf#isDependedOn -->
-
-    <owl:ObjectProperty rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#isDependedOn">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
-        <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <rdfs:label xml:lang="en">has size</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -108,6 +117,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Location"/>
+        <rdfs:comment xml:lang="zh">出土地</rdfs:comment>
+        <rdfs:label xml:lang="en">is found at</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -118,6 +129,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Location"/>
+        <rdfs:comment xml:lang="zh">窑口</rdfs:comment>
+        <rdfs:label xml:lang="en">is from kiln</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -128,6 +141,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Location"/>
+        <rdfs:comment xml:lang="zh">现藏于（某博物馆）</rdfs:comment>
+        <rdfs:label xml:lang="en">is housed at</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -138,6 +153,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Material"/>
+        <rdfs:label xml:lang="en">is made of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -159,6 +175,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">base diameter</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -169,6 +186,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">belly diameter</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -179,6 +197,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">foot diameter</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -189,6 +208,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">mouth diameter</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -199,6 +219,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has feature</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -209,6 +230,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has ornamentation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -219,6 +241,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Porcelain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">height</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -248,6 +271,8 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#BodyMaterial">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Material"/>
+        <skos:prefLabel xml:lang="en">body material</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">瓷料</skos:prefLabel>
     </owl:Class>
     
 
@@ -425,6 +450,8 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Cooking">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+        <skos:prefLabel xml:lang="en">cooking</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">烹煮</skos:prefLabel>
     </owl:Class>
     
 
@@ -501,6 +528,7 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#DeepBelly">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Belly"/>
+        <owl:disjointWith rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#ShallowBelly"/>
         <skos:prefLabel xml:lang="en">deep belly</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">深腹</skos:prefLabel>
     </owl:Class>
@@ -580,6 +608,12 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Ear">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DependOn"/>
+                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:prefLabel xml:lang="en">ear</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">耳</skos:prefLabel>
     </owl:Class>
@@ -633,6 +667,8 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#GlazeMaterial">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Material"/>
+        <skos:prefLabel xml:lang="en">glaze material</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">釉料</skos:prefLabel>
     </owl:Class>
     
 
@@ -755,6 +791,7 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#LargeMouth">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Mouth"/>
+        <owl:disjointWith rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallMouth"/>
         <skos:prefLabel xml:lang="en">large mouth</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">大口</skos:prefLabel>
     </owl:Class>
@@ -765,6 +802,7 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#LargeSize">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Size"/>
+        <owl:disjointWith rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#SmallSize"/>
         <skos:prefLabel xml:lang="en">large size</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">大型</skos:prefLabel>
     </owl:Class>
@@ -813,6 +851,12 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Neck">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#DependOn"/>
+                <owl:someValuesFrom rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Neck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:prefLabel xml:lang="en">neck</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">颈</skos:prefLabel>
     </owl:Class>
@@ -823,6 +867,8 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Planting">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+        <skos:prefLabel xml:lang="en">planting</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">栽培</skos:prefLabel>
     </owl:Class>
     
 
@@ -840,6 +886,8 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Sacrifice">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+        <skos:prefLabel xml:lang="en">sacrifice</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">祭祀</skos:prefLabel>
     </owl:Class>
     
 
@@ -907,6 +955,8 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#StoringLiquid">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+        <skos:prefLabel xml:lang="en">storing liquid</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">贮存液体</skos:prefLabel>
     </owl:Class>
     
 
@@ -915,6 +965,8 @@
 
     <owl:Class rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#StoringSolid">
         <rdfs:subClassOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Function"/>
+        <skos:prefLabel xml:lang="en">storing solid</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">贮存固体</skos:prefLabel>
     </owl:Class>
     
 
@@ -952,6 +1004,78 @@
         <skos:prefLabel xml:lang="en">Zun</skos:prefLabel>
         <skos:prefLabel xml:lang="zh">瓷尊</skos:prefLabel>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#EvertedRimMouth -->
+
+    <owl:NamedIndividual rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#EvertedRimMouth">
+        <rdf:type rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Mouth"/>
+        <rdfs:comment xml:lang="zh">定窑瓷器特征之一。系对瓷器口部因刮去釉层而露出毛涩胎骨的称谓。形成芒口的原因主要是采用某些装烧方法所致，如对口烧、覆烧等，为防止器物之间或器物与窑具相粘连，口部就不能有釉。</rdfs:comment>
+        <skos:prefLabel xml:lang="en">everted rim mouth</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">芒口</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#Jin -->
+
+    <owl:NamedIndividual rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#Jin">
+        <rdf:type rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Dynasty"/>
+        <skos:prefLabel xml:lang="en">the Jin Dynasty</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">金</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#JindingKilnWhiteglazedPorcelainDishWithFloralPattern -->
+
+    <owl:NamedIndividual rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#JindingKilnWhiteglazedPorcelainDishWithFloralPattern">
+        <rdf:type rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Dish"/>
+        <hasComponent rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#EvertedRimMouth"/>
+        <hasComponent rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#LowRingFoot"/>
+        <hasDynasty rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Jin"/>
+        <isMadeOf rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#WhiteGlaze"/>
+        <DiameterOfMouth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.6</DiameterOfMouth>
+        <hasFeature xml:lang="zh">胎细体薄，制作规整</hasFeature>
+        <hasOrnamentation xml:lang="zh">内底中印折枝牡丹一朵，其周印莲瓣纹一圈</hasOrnamentation>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</height>
+        <schema:image rdf:resource="https://ch-szbwg.oss-cn-beijing.aliyuncs.com/temp/jindingyaobaiyouhuahuiwencidie_1697450839715.png"/>
+        <rdfs:seeAlso rdf:resource="https://szbwgvue.chwhyun.cn/szbwg-web/#/relic-detail/1712390636436103170"/>
+        <skos:prefLabel xml:lang="en">Jinding Kiln white‑glazed porcelain dish with floral pattern</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">金定窑白釉花卉纹瓷碟</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#LowRingFoot -->
+
+    <owl:NamedIndividual rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#LowRingFoot">
+        <rdf:type rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#Foot"/>
+        <skos:prefLabel xml:lang="en">low ring foot</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">矮圈足</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://akisolm.github.io/ontology/porcelain.rdf#WhiteGlaze -->
+
+    <owl:NamedIndividual rdf:about="https://akisolm.github.io/ontology/porcelain.rdf#WhiteGlaze">
+        <rdf:type rdf:resource="https://akisolm.github.io/ontology/porcelain.rdf#GlazeMaterial"/>
+        <skos:prefLabel xml:lang="en">white glaze</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">白釉</skos:prefLabel>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
